@@ -6,10 +6,19 @@
        echo '<script>window.location.href="index.php"</script>';
     }
 ?>
+<!-- justify-content-center -->
 
-    <div class="py-5 bg-light">
+    <div class="py-5">
         <div class="container mt-5">
             <div class="row justify-content-center">
+
+
+                <div class="col-md-5">
+                    <div class="pos-img mt-3">
+                        <img src="assets/images/images.png" alt="">
+                    </div>
+                </div>
+
                 <div class="col-md-6">
                     <div class="card shadow rounded-4">
 
@@ -40,6 +49,8 @@
                         </div>
                     </div>
                 </div>
+
+         
             </div>
         </div>
     </div>
