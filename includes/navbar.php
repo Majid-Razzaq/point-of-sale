@@ -11,12 +11,18 @@
           <a class="nav-link active" href="index.php">Home</a>
         </li>
         <?php if(isset($_SESSION['loggedIn'])): ?>
-            <li class="nav-item">
-              <a class="nav-link" href="#"><?= $_SESSION['loggedInUser']['name'] ?></a>
+        
+            <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <?= $_SESSION['loggedInUser']['name'] ?>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+            <li><a class="dropdown-item text-white" href="admin/index.php">dashboard</a></li>
+              <li class="dropdown-item"><a class="text-decoration-none text-white" href="logout.php">Logout</a>
             </li>
-            <li class="nav-item">
-              <a class="btn btn-danger" href="logout.php">Logout</a>
-            </li>
+          </ul>
+        </li>
+     
         <?php else: ?>
             <li class="nav-item">
             <a class="nav-link" href="login.php">Login</a>
